@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/book/book",
+    "pages/weather/weather",
+    "pages/logs/logs"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取天气信息"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "demo",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/home1.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/weather1.png",
+        "iconPath": "images/weather.png",
+        "pagePath": "pages/weather/weather",
+        "text": "天气"
+      },
+      {
+        "selectedIconPath": "images/book1.png",
+        "iconPath": "images/book.png",
+        "pagePath": "pages/book/book",
+        "text": "图书"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

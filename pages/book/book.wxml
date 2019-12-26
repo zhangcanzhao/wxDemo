@@ -1,0 +1,21 @@
+<!--pages/book/book.wxml-->
+<view class = "container">
+  <scroll-view class = "topTab" scroll-x="true" bindscroll="scroll" style="width: 100%">
+    <view bindtap="clickTitle" data-id="{{item.id}}" class="topTab-scroll-box {{ item.id == num ? 'topTab-scroll-box-active' : ''}}" wx:key = "{{item.id}}" wx:for = "{{catalogList}}">{{item.catalog}}</view>
+  </scroll-view>
+  <scroll-view scroll-y = "true" bindscroll="scroll" class = "scrollBox" bindscrolltolower = "lower">
+    <view class = "bookItem" wx:for="{{list}}" wx:key = "{{item.index}}">
+      <image class = "bookImg" src = "{{item.img}}" binderror="errorFunction" data-index = "{{index}}"></image>
+      <view class = "bookRight">
+        <view class = "title">{{item.title}}</view>
+        <view class = "catalog">类别：{{item.catalog}}</view>
+        <view class = "catalog redColor">阅读数：{{item.reading}}</view>
+        <view class = "text">简介：{{item.tags}}</view>
+      </view>
+    </view>
+    <view class="weui-loadmore" wx:if = "{{ifLoding}}">
+        <view class="weui-loading" wx:if = "{{tips == '加载中'}}"></view>
+        <view class="weui-loadmore__tips">{{tips}}</view>
+    </view>
+  </scroll-view>
+</view>

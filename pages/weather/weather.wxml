@@ -1,0 +1,19 @@
+<!--pages/weater/weater.wxml-->
+<view class = "weather">
+  <view class = 'top'>
+    <view>{{weather.city}}</view>
+    <view>{{weather.date}}</view>
+    <view>{{weather.time}}更新</view>
+  </view>
+  <view class = "topday">
+    <view class = "temperature">{{weather.temperature}}</view>
+    <view class = "topdayWeather">{{weather.weatherDesc}}</view>
+  </view>
+  <view class = "hebdomadWeather">
+    <view class = "item" wx:for = "{{weather.weather_data}}">
+      <view class = "daily_weekday">{{item.date}}</view>
+      <view class = "daily_temperature">{{item.temperature}}</view>
+      <view class = "daily_summary">{{item.weather}}</view>
+    </view>
+  </view>
+</view>
